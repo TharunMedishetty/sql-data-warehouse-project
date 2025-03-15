@@ -74,7 +74,7 @@ customer_key      NVARCHAR(50),
 order_date        DATE,
 shipping_date     DATE,
 due_date          DATE,
-sales_amount      DATE,
+sales_amount      INT,
 quantity          INT,
 price             INT
 );
