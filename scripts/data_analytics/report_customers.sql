@@ -18,6 +18,8 @@ Highlights:
 	    - recency (months since last order)
 		- average order value
 		- average monthly spend
+Execution:
+	SELECT * FROM gold.report_customers
 ===============================================================================
 */
 USE DataWarehouse
@@ -47,6 +49,7 @@ CREATE VIEW  gold.report_customers AS
 			  gold.fact_sales_tb f
 	LEFT JOIN gold.dim_customers_tb c
 	ON		  f.customer_key = c.customer_key
+	WHERE f.order_date IS NOT NULL
 	),
 	/*---------------------------------------------------------------------------
 	2) Customer Aggregations: Summarizes key metrics at the customer level
@@ -110,3 +113,6 @@ CREATE VIEW  gold.report_customers AS
 		END AS avg_monthly_spend
 	FROM
 	customer_aggregation;
+
+--Execution
+SELECT * FROM gold.report_customers
