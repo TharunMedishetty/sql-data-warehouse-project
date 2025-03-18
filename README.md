@@ -91,11 +91,14 @@ data-warehouse-project/
 │   ├── data_flow.drawio                # Draw.io file for the data flow diagram
 │   ├── data_models.drawio              # Draw.io file for data models (star schema)
 │   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
 │   ├── silver/                         # Scripts for cleaning and transforming data
 │   ├── gold/                           # Scripts for creating analytical models
+│   ├── EDA/                            # Scripts for performing EDA
+│   ├── data_analytics/                 # Scripts for creating reports  
 │
 ├── tests/                              # Test scripts and quality files
 │
